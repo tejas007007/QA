@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LoginDemo" parallel="tests" thread-count="2">
+	<test name="LoginTest" >
+		<classes>
+			<class name="Login.LoginToMakeMyTrip">
+			</class>
+		</classes>
+	</test>
+	<test name="LoginTest2">
+		<classes>
+			<class name="Login.LoginToMakeMyTrip">
+			</class>
+		</classes>
+	</test>
+</suite>
