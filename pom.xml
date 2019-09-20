@@ -22,9 +22,9 @@
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-resources-plugin</artifactId>
   <version>3.1.0</version>
-  <type>maven-plugin</type>
-			 </plugin>
-            <!-- Following plugin executes the testng tests -->
+		</plugin>
+            
+		<!-- Following plugin executes the testng tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
