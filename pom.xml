@@ -32,7 +32,7 @@
 				<configuration>
 					<!-- Suite testng xml file to consider for test execution -->
 					<suiteXmlFiles>
-						<suiteXmlFile>src/main/resources/Xml/LoginOne.xml</suiteXmlFile>
+						<suiteXmlFile>src/main/resources/Xml/Login1.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
