@@ -22,7 +22,7 @@ public class LoginToMakeMyTrip extends MakeMyTripLoginCredential{
 	String str_to_code=Data.Login.LoginData.str_to_city_code;
 	String ExecutionBrowserName="firefox";
 
-	WebDriver driver= Utilities.Driver.InitiateSeleniumDriver.GetDriver(ExecutionBrowserName);
+	public WebDriver driver= Utilities.Driver.InitiateSeleniumDriver.GetDriver(ExecutionBrowserName);
 	WebDriverWait wt = new WebDriverWait(driver, 30);
 
 	String ExtentReportName="Login";
