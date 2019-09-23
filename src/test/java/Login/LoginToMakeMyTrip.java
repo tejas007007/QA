@@ -111,7 +111,8 @@ public class LoginToMakeMyTrip extends MakeMyTripLoginCredential{
 	@Test(priority = 6)
 	public  void CloseTest () throws IOException
 	{
-		ExtentReporting.CloseReport(ExtentTest_Obj_test);
+		//ExtentReporting.CloseReport(ExtentTest_Obj_test);
+		ExtentReporting.CloseReport();
 		//driver.close();
 	}
 }
