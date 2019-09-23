@@ -91,12 +91,13 @@
 			<artifactId>selenium-chrome-driver</artifactId>
 			<version>4.0.0-alpha-2</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+<!-- https://mvnrepository.com/artifact/com.github.japgolly.fork.google-cloud-trace/java-timestamp -->
 <dependency>
-    <groupId>joda-time</groupId>
-    <artifactId>joda-time</artifactId>
-    <version>2.10.4</version>
+    <groupId>com.github.japgolly.fork.google-cloud-trace</groupId>
+    <artifactId>java-timestamp</artifactId>
+    <version>0.3.3</version>
 </dependency>
+
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
