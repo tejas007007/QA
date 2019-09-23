@@ -4,8 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.time.LocalDate;
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -24,12 +25,17 @@ public class ExtentReporting extends IssueReporting{
 	public static String CurrentRunPath;
 	public static ExtentTest SetReport(String Reportname,String ReportDescription) {
 
-		LocalDate date = java.time.LocalDate.now();
-
-		reports = new ExtentReports(System.getProperty("user.dir")+"\\Reports\\Run_"+getPropValueForProp()+" Date_"+date+"\\"+Reportname+"_Result.html", false);
-
-		CurrentRunPath=System.getProperty("user.dir")+"\\Reports\\Run_"+getPropValueForProp()+" Date_"+date+"\\";
+		//LocalDate date = java.time.LocalDate.now();
 		
+		DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+		Date dateobj = new Date();
+		System.out.println(df.format(dateobj));
+		
+
+		reports = new ExtentReports(System.getProperty("user.dir")+"\\Reports\\Run_"+getPropValueForProp()+" Date_"+df.format(dateobj)+"\\"+Reportname+"_Result.html", false);
+
+		CurrentRunPath=System.getProperty("user.dir")+"\\Reports\\Run_"+getPropValueForProp()+" Date_"+df.format(dateobj)+"\\";
+
 		test = reports.startTest(Reportname, ReportDescription);
 
 		return test;
@@ -79,7 +85,14 @@ public class ExtentReporting extends IssueReporting{
 		out.close();
 	}
 
-	public static void CloseReport(ExtentTest test) throws IOException
+	//	public static void CloseReport(ExtentTest test) throws IOException
+	//	{
+	//		UpdateValueForProp();
+	//		reports.endTest(test);
+	//		reports.flush();
+	//	}
+
+	public static void CloseReport() throws IOException
 	{
 		UpdateValueForProp();
 		reports.endTest(test);
